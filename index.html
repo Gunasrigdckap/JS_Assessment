@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCKAP Palli Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="navbar">
+        <h1 id="dashboardHeading"><i id="icon" class="fa-regular fa-clipboard"></i>  DCKAP Palli Inventory</h1>
+    </div>
+    <div class="dashboardMain">
+        <h1 id="dashboardSideHeading">Dashboard</h1>
+        <div class="dashboard" id="dashboard">
+            <!-- Highest Quantity Products  -->
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="add-btn" onclick="openModal('add')">Add Product</button>
+        <button class="update-btn" onclick="openModal('update')">Update Inventory</button>
+    </div>
+    <!-- Add Product Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <h2>Add Product</h2>
+            <input type="text" id="addProductName" placeholder="Product Name">
+            <input type="number" id="addProductQuantity" placeholder="Quantity">
+            <button class="addButton" onclick="addProduct()">Add</button>
+            <button class="closeButton" onclick="closeModal('add')">Close</button>
+        </div>
+    </div>
+    <!-- Update Inventory Modal -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <h2>Update Inventory</h2>
+            <input type="text" id="updateProductName" placeholder="Product Name">
+            <input type="number" id="updateProductQuantity" placeholder="Quantity">
+            <input type="text" id="updateRecipient" placeholder="Recipient Name">
+            <button class="addButton" onclick="updateInventory()">Update</button>
+            <button class="closeButton" onclick="closeModal('update')">Close</button>
+        </div>
+    </div>
+    <div>
+        <div class="chart-container" style="width:100%; max-width:600px; margin: auto;">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <div class="dashboardMain">
+        <h2>Recipient Details</h2>
+        <table id="recipientsTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Recipient</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

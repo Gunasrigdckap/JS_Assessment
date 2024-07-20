@@ -1,0 +1,173 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+     background-color: #F4F6F7;
+}
+
+#navbar {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#dashboardHeading {
+    margin: 0;
+    padding: 20px 30px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.dashboardMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff6f61;
+}
+
+.product h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.buttons {
+    margin: 40px 0;
+    margin-left: 40%;
+    
+}
+.buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-btn {
+    background-color: #28a745;
+    color: white;
+}
+.update-btn {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.addButton{
+    background-color: #28a745;
+    color: white;
+}
+
+.closeButton{
+    background-color: #ff4d4d;
+    color: white;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+.modal-content input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.modal-content button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 75px;
+}
+
+/* Chart Container Styles */
+.chart-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/* Styles for the recipient table */
+#recipientsTable {
+    width: 500px;
+    background-color: white;
+    text-align: center;
+}
+
+#recipientsTable th, #recipientsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    word-wrap: break-word;
+}
+
+#recipientsTable th {
+    background-color: #6f6f6f;
+    color: white;
+}
+#recipientsTable tbody {
+    display: block;
+    max-height: 200px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+#recipientsTable thead, #recipientsTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
